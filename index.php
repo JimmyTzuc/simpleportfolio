@@ -145,7 +145,7 @@
                     </li>
                     <li>
                         <span class="fa-li"><i class="fas fa-check"></i></span>
-                        PYTHON - DJANGO/FASTAPI
+                        PYTHON - DJANGO
                     </li>
                     <li>
                         <span class="fa-li"><i class="fas fa-check"></i></span>
