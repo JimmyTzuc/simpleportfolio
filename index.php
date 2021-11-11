@@ -149,11 +149,11 @@
                     </li>
                     <li>
                         <span class="fa-li"><i class="fas fa-check"></i></span>
-                        JAVASCRIPT - REACT JS/NestJS
+                        JAVASCRIPT
                     </li>
                     <li>
                         <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Ruby on Rails
+                        PL/SQL - Oracle APEX
                     </li>
                 </ul>
                 <div class="subheading mb-3">Web Services</div>
