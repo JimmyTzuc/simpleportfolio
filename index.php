@@ -29,17 +29,17 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none"><img width="50px" src="assets/img/logo.png" alt="Jimmy Tzuc"></span>
+            <span class="d-block d-lg-none"><img width="70px" src="assets/img/logo.png" alt="Jimmy Tzuc"></span>
             <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded mx-auto mb-2" src="assets/img/logo.png" alt="..." /></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li> -->
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li> -->
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="resources/descargas.php">Download my CV</a></li>
             </ul>
@@ -60,13 +60,12 @@
                 </div>
                 <p class="lead mb-5">I'm profesional web Developer having 3+ years of experience!</p>
 
-                <p>Also I have a company called <a href="https://codemid.mx/">CodeMid</a></p>
-
                 <p>You Can Hire Me!</p>
                 <div class="social-icons pt-5">
                     <a target="_blank" class="social-icon" href="https://www.linkedin.com/in/jimmytzuc/"><i class="fab fa-linkedin-in"></i></a>
                     <a target="_blank" class="social-icon" href="https://github.com/JimmyTzuc"><i class="fab fa-github"></i></a>
-                    <a target="_blank" class="social-icon" href="https://www.facebook.com/St.JimmyT"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" class="social-icon" href="https://www.facebook.com/jimmytzuc/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" class="social-icon" href="https://twitter.com/JimmyTzuc"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </section>
@@ -205,7 +204,7 @@
         </section>
         <hr class="m-0" />
 
-        <!-- Interests-->
+        <!-- Interests
         <section class="resume-section" id="interests">
             <div class="resume-section-content">
                 <h2 class="mb-5">Interests</h2>
@@ -213,8 +212,9 @@
                 <p class="mb-0">I follow superhero series and movies, I love comics and I spend a large part of my free time exploring the latest technological advances in the world of web development.</p>
             </div>
         </section>
-        <hr class="m-0" />
+        <hr class="m-0" /> -->
         <!-- Portfolio-->
+        
         <section class="resume-section" id="portfolio">
             <div class="resume-section-content">
                 <h2 class="mb-5">Portfolio</h2>
