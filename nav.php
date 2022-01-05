@@ -48,7 +48,12 @@
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <!-- <a href="#" class="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
             <a href="/" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md" aria-current="page">Inicio</a>
-            <a href="#" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md" aria-current="page">Hola</a>
+            <a href="#experience" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Experince</a>
+            <a href="#education" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Education</a>
+            <a href="#skills" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Skills</a>
+            <a href="#portfolio" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Portfolio</a>
+            <a href="https://blog.jimmytzuc.com" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Blog</a>
+            <a href="resources/descargas.php" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">My CV</a>
         </div>
     </div>
 </nav>
