@@ -33,12 +33,12 @@
     ?>
     <!-- Page Content-->
   </header>
-  <main>
+  <main class="text-gray-100 bg-gray-700">
     <?php
         include 'body.php';
     ?>
   </main>
-  <footer class="flex flex-col items-center p-3 bg-indigo-900">
+  <footer class="flex flex-col items-center p-3 text-gray-100 bg-indigo-900">
     <?php 
         include 'footer.php';
     ?>
