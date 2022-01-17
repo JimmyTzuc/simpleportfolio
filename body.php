@@ -21,7 +21,6 @@
                 </div>
             </div>
         </section>
-        <hr class="" />
         <!-- Experience-->
         <section class="w-full px-10 py-14" id="experience">
             <div class="">
@@ -68,7 +67,6 @@
                 </div>
             </div>
         </section>
-        <hr class="" />
         <!-- Education-->
         <section class="flex items-center w-full h-screen px-10 py-14" id="education">
             <div class="">
@@ -83,7 +81,6 @@
                 </div>
             </div>
         </section>
-        <hr class="" />
         <!-- Skills-->
         <section class="w-full px-10 py-14" id="skills">
             <div class="">
@@ -154,7 +151,6 @@
                 </ul>
             </div>
         </section>
-        <hr class="" />
 
         
         <section class="w-full px-10 py-14" id="portfolio">
