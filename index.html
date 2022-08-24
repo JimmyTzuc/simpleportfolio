@@ -26,27 +26,27 @@
 </head>
 
 <body class="dark:text-white dark:bg-gray-900 ">
-  <header>
+<header>
     <!-- Navigation-->
     <nav class="fixed top-0 left-0 right-0 z-10 px-8 bg-indigo-900" x-data="{ open: false }">
-      <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div class="relative flex items-center justify-between h-16">
-              <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
+        <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
                   <!-- Mobile menu button-->
-                  <button x-on:click="open = true" class="inline-flex items-center justify-center p-2 text-yellow-400 rounded-md hover:text-yellow-400 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500" aria-expanded="false">
-                      <span class="sr-only">Open main menu</span>
-                      <!-- Icon when menu is closed. -->
-  
-                      <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <button x-on:click="open = true" class="inline-flex items-center justify-center p-2 text-yellow-400 rounded-md hover:text-yellow-400 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed. -->
+    
+                        <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                      </svg>
+                        </svg>
                       <!-- Icon when menu is open. -->
-                      <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                  </button>
-              </div>
-              <div class="flex items-center justify-between flex-1 sm:items-stretch sm:justify-between">
+                        <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex items-center justify-between flex-1 sm:items-stretch sm:justify-between">
                   <!-- logotipo -->
                   <a href="/" class="flex items-center flex-shrink-0">
                       <img class="block w-auto h-10 lg:hidden" src="assets/img/logo.png" alt="Workflow">
@@ -58,7 +58,7 @@
                           <!-- <a href="#" class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
                           <a href="/" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Home</a>
                           <a href="#experience" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Experience</a>
-                          <a href="#education" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Education</a>
+                          <!--<a href="#education" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Education</a>-->
                           <a href="#skills" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Skills</a>
                           <a href="#portfolio" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Portfolio</a>
               <!-- <a href="https://blog.jimmytzuc.com" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Blog</a> -->
@@ -79,19 +79,19 @@
               <!-- <a href="#" class="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
               <a href="/" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md" aria-current="page">Inicio</a>
               <a href="#experience" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Experince</a>
-              <a href="#education" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Education</a>
+              <!--<a href="#education" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Education</a>-->
               <a href="#skills" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Skills</a>
               <a href="#portfolio" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Portfolio</a>
               <a href="https://drive.google.com/file/d/1owhF_7FnTmAeAHTiXs4ruocNSCE51Hjl/view" target="_blank" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">My CV</a>
           </div>
       </div>
-  </nav>
+    </nav>
     <!-- Page Content-->
-  </header>
-  <main class="text-gray-100 bg-gray-700">
+</header>
+<main class="text-gray-100 bg-gray-700">
     
         <!-- About-->
-        <section class="flex items-center justify-center w-full h-screen" id="about">
+    <section class="flex items-center justify-center w-full h-screen" id="about">
           <div class="container px-10 text-center">
               <h1 class="py-3 text-7xl">
                   Jimmy
@@ -112,9 +112,10 @@
                   <a target="_blank" class="p-1 mx-5" href="https://twitter.com/JimmyTzuc"><i class="fab fa-twitter"></i></a>
               </div>
           </div>
-      </section>
+    </section>
+    <hr>
       <!-- Experience-->
-      <section class="w-full px-10 py-14" id="experience">
+    <section class="w-full h-screen px-10 py-14" id="experience">
         <div class="flex flex-col items-center justify-center pt-14">
             <h2 class="text-3xl font-bold">Experience</h2>
         </div>	
@@ -169,9 +170,10 @@
                 <div class=""><span class="italic font-bold">Aug 2018 - Feb 2019</span></div>
             </div>
           </div>
-      </section>
-      <!-- Education-->
-      <section class="w-full px-10 py-14" id="education">
+    </section>
+    <hr>
+    <!-- Education--><!--
+    <section class="w-full h-screen px-10 py-14" id="education">
         <div class="flex flex-col items-center justify-center pt-14">
             <h2 class="text-3xl font-bold">Education</h2>
         </div>
@@ -185,32 +187,33 @@
                   <div class="flex-shrink-0"><span class="font-bold">2013 - 2020</span></div>
               </div>
           </div>
-      </section>
-      <!-- Skills-->
-      <section class="w-full px-10 py-14" id="skills">
+    </section>
+    <hr>-->
+    <!-- Skills-->
+    <section class="w-full h-screen px-10 py-14" id="skills">
         <div class="flex flex-col items-center justify-center pt-14">
             <h2 class="text-3xl font-bold">Skills</h2>
         </div>
           <div class="">
-              <div class="mb-3 subheading">Programming Languages & Frameworks</div>
-              <ul class="mb-2 fa-ul">
-                  <li>
-                      <span class="fa-li"><i class="fas fa-check"></i></span>
-                      PHP - LARAVEL
-                  </li>
-                  <li>
-                      <span class="fa-li"><i class="fas fa-check"></i></span>
-                      PYTHON - DJANGO
-                  </li>
-                  <li>
-                      <span class="fa-li"><i class="fas fa-check"></i></span>
-                      JAVASCRIPT
-                  </li>
-                  <li>
-                      <span class="fa-li"><i class="fas fa-check"></i></span>
-                      PL/SQL - Oracle APEX
-                  </li>
-              </ul>
+                <div class="mb-3 subheading">Programming Languages & Frameworks</div>
+                <ul class="mb-2 fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        PYTHON - DJANGO - DRF - FastAPI - Flask
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        PHP - LARAVEL
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        JAVASCRIPT
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        PL/SQL - Oracle APEX
+                    </li>
+                </ul>
               <div class="mb-3 subheading">Web Services</div>
               <ul class="mb-2 fa-ul">
                 <li>
@@ -265,73 +268,59 @@
                   </li>
               </ul>
           </div>
-      </section>
-
-      
-      <section class="w-full px-10 py-14" id="portfolio">
-          
-          <div>
-              
-<div class="flex flex-col items-center justify-center pt-14">
-    <h2 class="text-3xl font-bold">Portfolio</h2>
-    <h4 class="text-lg ">Keep in mind that it is not in order of importance!</h4>
-</div>	
-<div class="container">
-<section class="py-5">
-<h2 class="text-2xl font-bold">Django Projects</h2>
-<div class="py-3">
-    <a class="text-xl font-medium " href="#">Request weather API</a>
-    <p class="italic ">consumming API weather's with request library</p>
-</div>
-<div class="py-3">
-    <a class="text-xl font-medium " href="#">Rest API Django</a>
-    <p class="italic ">API REST with django & django rest framework </p>
-</div>
-<div class="py-3">
-    <a class="text-xl font-medium " href="#">Simple Portfolio</a>
-    <p class="italic ">Full stack APP with django,my old Personal Portfolio.</p>
-</div>
-<div class="py-3">
-    <a class="text-xl font-medium " href="#">Boilerplate Django with docker</a>
-    <p class="italic ">This is a Docker (with docker-compose) environment for Django Project development.</p>
-</div>
-</section>
-<section class="py-5">
-<h2 class="text-2xl font-bold">Laravel Projects</h2>
-<div class="py-3">
-    <a class="text-xl font-medium" href="https://github.com/JimmyTzuc/apicp	">API POSTAL CODES</a>
-    <p class="italic ">Api GraphQl consulting postal codes in Yucatán with Laravel, Jetstream & Ligthouse - you can visit the documentation on <a href="https://apigeo.jimmytzuc.com">apigeo.jimmytzuc.com</a> & the graphql playground on <a href="https://apigeo.jimmytzuc.com/graphql-playground">apigeo.jimmytzuc.com/graphql-playground</a></p>
-</div>
-</section>
-
-</div>
-
-
-          </div>
-      </section>
-
-      
-  
-  </main>
-
-
-  
-  <footer class="flex flex-col items-center p-3 text-gray-100 bg-indigo-900">
+    </section>
+    <hr>
+    <section class="w-full px-10 py-14" id="portfolio">
+        <div>
+            <div class="flex flex-col items-center justify-center pt-14">
+                <h2 class="text-3xl font-bold">Portfolio</h2>
+                <h4 class="text-lg ">Keep in mind that it is not in order of importance!</h4>
+            </div>	
+                <div class="container">
+                    <section class="py-5">
+                        <h2 class="text-2xl font-bold">Django Projects</h2>
+                        <div class="py-3">
+                            <a class="text-xl font-medium " href="#">Request weather API</a>
+                            <p class="italic ">consumming API weather's with request library</p>
+                        </div>
+                        <div class="py-3">
+                            <a class="text-xl font-medium " href="#">Rest API Django</a>
+                            <p class="italic ">API REST with django & django rest framework </p>
+                        </div>
+                        <div class="py-3">
+                            <a class="text-xl font-medium " href="#">Simple Portfolio</a>
+                            <p class="italic ">Full stack APP with django,my old Personal Portfolio.</p>
+                        </div>
+                        <div class="py-3">
+                            <a class="text-xl font-medium " href="#">Boilerplate Django with docker</a>
+                            <p class="italic ">This is a Docker (with docker-compose) environment for Django Project development.</p>
+                        </div>
+                    </section>
+                    <section class="py-5">
+                        <h2 class="text-2xl font-bold">Laravel Projects</h2>
+                        <div class="py-3">
+                            <a class="text-xl font-medium" href="https://github.com/JimmyTzuc/apicp	">API POSTAL CODES</a>
+                            <p class="italic ">Api GraphQl consulting postal codes in Yucatán with Laravel, Jetstream & Ligthouse - you can visit the documentation on <a href="https://apigeo.jimmytzuc.com">apigeo.jimmytzuc.com</a> & the graphql playground on <a href="https://apigeo.jimmytzuc.com/graphql-playground">apigeo.jimmytzuc.com/graphql-playground</a></p>
+                        </div>
+                    </section>
+                </div>
+        </div>
+    </section>
+</main>
+<footer class="flex flex-col items-center p-3 text-gray-100 bg-indigo-900">
     <div class="py-3">
       <a target="_blank" class="p-1 mx-5" href="https://www.linkedin.com/in/jimmytzuc/"><i class="fab fa-linkedin-in"></i></a>
       <a target="_blank" class="p-1 mx-5" href="https://github.com/JimmyTzuc"><i class="fab fa-github"></i></a>
       <a target="_blank" class="p-1 mx-5" href="https://www.facebook.com/jimmytzuc/"><i class="fab fa-facebook-f"></i></a>
       <a target="_blank" class="p-1 mx-5" href="https://twitter.com/JimmyTzuc"><i class="fab fa-twitter"></i></a>
-  </div>
-<section class="">
-
-<p class="font-bold text-red-600"><span class="text-yellow-500">&copy;</span>	Made by <span class="text-yellow-500">Jimmy Tzuc</span> All rights reserved 2022</p>
-</section>
-  </footer>
+    </div>
+    <section class="">
+        <p class="font-bold text-red-600"><span class="text-yellow-500">&copy;</span>	Made by <span class="text-yellow-500">Jimmy Tzuc</span> All rights reserved 2022</p>
+    </section>
+</footer>
 </body>
-  <!-- Core theme JS-->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="js/scripts.js"></script>
-  
+    <!-- Core theme JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/scripts.js"></script>
 </html>
