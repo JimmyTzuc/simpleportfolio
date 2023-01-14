@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body>
+<body class="text-gray-100 bg-gray-900">
     <header>
         <!-- Navigation-->
         <nav class="fixed top-0 left-0 right-0 z-10 px-8 bg-indigo-900" x-data="{ open: false }">
@@ -111,9 +111,21 @@
         </nav>
         <!-- Page Content-->
     </header>
-    <main class="text-gray-100 bg-gray-900">
-        <section class="flex items-center justify-center w-full h-screen">
-            <h1>Hello word!</h1>
+    <main>
+        <section class="pt-24 pl-6 border">
+            <h1 class="pb-6 text-xl">Bienvenido a mi blog</h1>
+            <div>
+                <ul>
+                    <li class="py-3">
+                        <a href="#" class="pb-5 text-lg italic text-red-500">¿Conventional commits?</a>
+                        <p>Escribir commits cualquiera puede hacerlo, pero sabias que existe una guia de como deberia de hacerce?</p>
+                    </li>
+                    <li class="py-3">
+                        <a href="#" class="pb-5 text-lg italic text-red-500">¿Conventional commits?</a>
+                        <p>Escribir commits cualquiera puede hacerlo, pero sabias que existe una guia de como deberia de hacerce?</p>
+                    </li>
+                </ul>
+            </div>
         </section>
 
     </main>
