@@ -128,12 +128,28 @@
         <div class="flex justify-center">
             <img class="h-96 w-full rounded-xl object-cover lg:w-4/5" src="assets/img/developer.jpg" />
         </div>
-        <div class="md:px-56 py-5">
-            <p class="py-3 text-justify">Para entender el concepto de meter a python en nuestro contenedor debemos tener en cuenta que hablamos de docker y sus containers</p>
+        <div class="md:px-50 lg:px-56 py-5">
+            <!--<p class="py-3 text-justify">Para entender el concepto de meter a python en nuestro contenedor debemos tener en cuenta que hablamos de docker y sus containers</p>
             <p class="py-3 text-justify">Si no tienes bien claro estos conceptos te invito a que leas las siguiente entrada: </p>
             <ul>
                 <li class="py-1"><a href="#">Docker como aliado</a></li>
-            </ul>
+            </ul>-->
+            <p class="py-3 text-justify">
+                Al momento de iniciar un nuevo proyecto se deciden que versiones de las librerias se utilizarán asi como la version de python y django u otros frameworks a utilizar y lo que se busca es que el ecosistema del proyecto sea compatible entre versiones.
+            </p>
+            <p class="py-3 text-justify">
+                Otro dilema que se presenta es que el trabajo colaborativo suele traer diversidad material para desarrollar lo cual ocasiona que algunos cuenten con sistemas operativos que otros, provocando el famoso "en mi maquina si funciona".
+            </p>
+            <p class="py-3 text-justify">
+                Contando una experiencia personal: Adquirí una macbook M2 proporcionada por la empresa en la que encontraba laborando y sus proyectos estaban en la version 3.6 de python, esta version ya no era compatible con arquitecturas ARM y por consecuente de las M1 y M2, por lo cual la tarea de configurar el ambiente local se complicaba y tenia que ser con la ayuda de Rosseta que es un traductor de Arquitectura x86 a ARM, como era de esperarse surgieron problemas por la compatibilidad y un sin fin de atrasos al momento de levantar el proyecto.
+            </p>
+            <p class="py-3 text-justify">
+                Antes de entrar de lleno en Docker se debe mencionar que existen otras maneras de encapsular nustras versiones en los que son conocidos como entornos virtuales, por mencionar algunos como <a class="text-yellow-400 italic" href="https://pipenv-es.readthedocs.io/es/latest/">pipenv</a>, <a class="text-yellow-400 italic" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html">conda</a>, <a class="text-yellow-400 italic" href="https://docs.python.org/es/3/library/venv.html">venv</a>.  
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Levantar proyecto docker-compose</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">docker-compose up -d</p>
+            </div>
         </div>
     </section>
 </main>
