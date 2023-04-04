@@ -135,21 +135,159 @@
                 <li class="py-1 text-yellow-400 list-disc ml-4"><a href="docker-como-aliado.html">Docker como aliado</a></li>
             </ul>
             <p class="py-3 text-justify">
-                Al momento de iniciar un nuevo proyecto se deciden que versiones de las librerias se utilizarán asi como la version de python y django u otros frameworks a utilizar y lo que se busca es que el ecosistema del proyecto sea compatible entre versiones.
+                Docker es una plataforma de software que te permite crear, probar e implementar aplicaciones en contenedores. Un contenedor es una unidad de software que contiene todo lo necesario para que una aplicación se ejecute de manera independiente.
             </p>
             <p class="py-3 text-justify">
-                Otro dilema que se presenta es que el trabajo colaborativo suele traer diversidad material para desarrollar lo cual ocasiona que algunos cuenten con sistemas operativos que otros, provocando el famoso "en mi maquina si funciona".
+                Docker es una forma fácil de encapsular aplicaciones y sus dependencias en un paquete portátil y autocontenido. Esto hace que sea fácil mover aplicaciones de un entorno a otro, lo que puede ser útil para el desarrollo, pruebas y producción.
             </p>
             <p class="py-3 text-justify">
-                Contando una experiencia personal: Adquirí una macbook M2 proporcionada por la empresa en la que encontraba laborando y sus proyectos estaban en la version 3.6 de python, esta version ya no era compatible con arquitecturas ARM y por consecuente de las M1 y M2, por lo cual la tarea de configurar el ambiente local se complicaba y tenia que ser con la ayuda de Rosseta que es un traductor de Arquitectura x86 a ARM, como era de esperarse surgieron problemas por la compatibilidad y un sin fin de atrasos al momento de levantar el proyecto.
+                Para Python, Docker proporciona una forma de ejecutar aplicaciones en un entorno aislado, con todas sus dependencias instaladas y configuradas de forma coherente.
             </p>
             <p class="py-3 text-justify">
                 Antes de entrar de lleno en Docker se debe mencionar que existen otras maneras de encapsular nustras versiones en los que son conocidos como entornos virtuales, por mencionar algunos como <a class="text-yellow-400 italic" href="https://pipenv-es.readthedocs.io/es/latest/">pipenv</a>, <a class="text-yellow-400 italic" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html">conda</a>, <a class="text-yellow-400 italic" href="https://docs.python.org/es/3/library/venv.html">venv</a>.  
             </p>
+            <p class="py-3 text-justify">
+                Ahora si, empecemos
+            </p>
+            <p class="py-3 text-justify">
+                Paso 1: Crear un archivo Dockerfile  <br>
+                El primer paso es crear un archivo Dockerfile. Este archivo especifica cómo construir la imagen de Docker que contiene Python y las dependencias necesarias para ejecutar una aplicación Django.
+            </p>
+            <p class="py-3 text-justify">
+                En el directorio de tu proyecto, crea un archivo llamado Dockerfile y agrega el siguiente contenido:
+            </p>
             <div class="p-0 overflow-hidden rounded-lg my-1">
-                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Levantar proyecto docker-compose</p>
-                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">docker-compose up -d</p>
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Dockerfile</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                    FROM python:3.8 
+                    <br>
+                    <br>
+                    ENV PYTHONUNBUFFERED 1 
+                    <br>
+                    <br>
+                    RUN mkdir /code <br>
+                    WORKDIR /code <br>
+                    COPY requirements.txt /code/ <br>
+                    RUN pip install -r requirements.txt <br>
+                    COPY . /code/ <br>
+                </p>
             </div>
+            <p class="py-3 text-justify">
+                Este archivo Dockerfile usa la imagen oficial de Python 3.8 como base y define el directorio de trabajo como /code. Luego, copia el archivo requirements.txt y lo utiliza para instalar todas las dependencias necesarias. Finalmente, copia todo el contenido del proyecto a la imagen de Docker.
+            </p>
+            <p class="py-3 text-justify">
+                Paso 2: Crear un archivo requirements.txt <br>
+                El archivo requirements.txt contiene todas las dependencias de Python necesarias para ejecutar la aplicación Django. Debes crear un archivo requirements.txt en el directorio principal de tu proyecto y agregar las dependencias necesarias. Por ejemplo, si tu aplicación Django requiere Django, agrega la siguiente línea al archivo requirements.txt:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">requirements.txt</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   Django==3.1.4 
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                También puedes agregar cualquier otra dependencia que necesites para tu proyecto.
+            </p>
+            <p class="py-3 text-justify">
+                Paso 3: Crear el contenedor de Docker <br>
+                Una vez que tienes el archivo Dockerfile y requirements.txt, puedes crear la imagen de Docker y ejecutar el contenedor.
+            </p>
+            <p class="py-3 text-justify">
+                Primero, construye la imagen de Docker utilizando el siguiente comando:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Docker Script</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   docker build -t my-django-app .
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Este comando construye una imagen de Docker con el nombre my-django-app. El punto al final del comando indica que se debe utilizar el directorio actual como el contexto de compilación.
+            </p>
+            <p class="py-3 text-justify">
+                Luego, puedes ejecutar el contenedor de Docker con el siguiente comando:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Docker Script</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   docker run -it --rm -p 8000:8000 my-django-app
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Este comando ejecuta el contenedor de Docker y lo mapea al puerto 8000 en tu máquina local. El parámetro --rm indica que se debe eliminar el contenedor después de que se detenga.
+            </p>
+            <p class="py-3 text-justify">
+                Una vez que el contenedor esté en ejecución, puedes abrir tu navegador y visitar la dirección http://localhost:8000 para ver tu aplicación Django en acción.
+            </p>
+            <p class="py-3 text-justify">
+                Paso 4: Configurar la aplicación Django <br>
+                Ahora que has creado el contenedor de Docker, debes configurar la aplicación Django para que se ejecute correctamente en el entorno de Docker.
+            </p>
+            <p class="py-3 text-justify">
+                Primero, asegúrate de que el archivo settings.py tenga la siguiente configuración:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">settings.py</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                    ALLOWED_HOSTS = ['*']
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Esta configuración permite que cualquier host se conecte a la aplicación.
+            </p>
+            <p class="py-3 text-justify">
+                Luego, agrega la siguiente línea al archivo Dockerfile antes de la copia del contenido del proyecto:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Dockerfile</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                    RUN python manage.py collectstatic --noinput
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Esta línea ejecuta el comando collectstatic de Django en la imagen de Docker. Este comando recolecta todos los archivos estáticos de tu aplicación y los guarda en la carpeta STATIC_ROOT.
+            </p>
+            <p class="py-3 text-justify">
+                Finalmente, modifica el comando docker run para incluir el parámetro -v y mapear el directorio de archivos estáticos de Django en la imagen de Docker al directorio local. De esta manera, los archivos estáticos se pueden servir correctamente:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Dockerfile</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                    docker run -it --rm -p 8000:8000 -v "$(pwd)"/static:/code/static my-django-app
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Paso 5: Trabajar con el contenedor de Docker <br>
+                Una vez que el contenedor de Docker esté en ejecución, puedes trabajar con él de la misma manera que trabajarías con una aplicación Django local.
+            </p>
+            <p class="py-3 text-justify">
+                Para acceder al shell de Django en el contenedor, utiliza el siguiente comando:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Docker Script</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   docker exec -it <container-id> python manage.py shell
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Donde <container-id> es el ID del contenedor de Docker. Puedes obtener el ID del contenedor ejecutando el siguiente comando:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Docker Script</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   docker ps
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Este comando lista todos los contenedores de Docker en ejecución.
+            </p>
+            <p class="py-3 text-justify">
+                Conclusión <br>
+                En resumen, Docker es una herramienta poderosa para el desarrollo de aplicaciones Python. Te permite encapsular tus aplicaciones y dependencias en un contenedor portátil y autocontenido, lo que hace que sea fácil mover tus aplicaciones entre entornos.
+            </p>
+            <p class="py-3 text-justify">
+                En este post, hemos cubierto cómo contener Python en un contenedor de Docker y cómo trabajar con Django en este entorno. Ahora estás listo para desarrollar tu aplicación Django en un entorno de Docker aislado y portátil. ¡Buena suerte!
+            </p>
         </div>
     </section>
 </main>
