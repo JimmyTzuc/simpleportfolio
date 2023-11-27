@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Jimmy Tzuc</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+    <link href="css/tailwind.min.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+</head>
+
+<body class="dark:text-white dark:bg-gray-900 ">
+<header>
+    <!-- Navigation-->
+    <nav class="fixed top-0 left-0 right-0 z-10 px-8 bg-indigo-900" x-data="{ open: false }">
+            <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="relative flex items-center justify-between h-16">
+                    <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
+                        <!-- Mobile menu button-->
+                        <button x-on:click="open = true"
+                            class="inline-flex items-center justify-center p-2 text-yellow-400 rounded-md hover:text-yellow-400 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500"
+                            aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <!-- Icon when menu is closed. -->
+
+                            <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <!-- Icon when menu is open. -->
+                            <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between flex-1 sm:items-stretch sm:justify-between">
+                        <!-- logotipo -->
+                        <a href="/" class="flex items-center flex-shrink-0">
+                            <img class="block w-auto h-10 lg:hidden" src="assets/img/logo.png" alt="Workflow">
+                            <img class="hidden w-auto h-10 lg:block" src="assets/img/logo.png">
+                        </a>
+                        <div class="hidden md:block md:ml-6">
+                            <div class="flex w-full space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <!-- <a href="#" class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
+                                <a href="/"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Home</a>
+                                <a href="#experience"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Experience</a>
+                                <!--<a href="#education" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Education</a>-->
+                                <a href="#skills"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Skills</a>
+                                <a href="#portfolio"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Portfolio</a>
+                                <a href="https://jimmytzuc.com/blog.html"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Blog</a>
+                                <!-- <a href="https://drive.google.com/file/d/1owhF_7FnTmAeAHTiXs4ruocNSCE51Hjl/view" target="_blank" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"  aria-current="page">My CV</a>-->
+                                <a href="https://drive.google.com/file/d/1vsaAT4wJxUl3FIAdt_4J2qFV5lfWaIJu/view
+                                    target="_blank"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"
+                                    aria-current="page">My CV</a>
+                                <!-- <a href="resources/descargas.php" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"  aria-current="page">My CV</a>-->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="md:hidden" x-show="open" x-on:click.away="open = false">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <!-- <a href="#" class="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
+                    <a href="/" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md"
+                        aria-current="page">Inicio</a>
+                    <a href="#experience"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Experince</a>
+                    <!--<a href="#education" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Education</a>-->
+                    <a href="#skills"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Skills</a>
+                    <a href="#portfolio"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Portfolio</a>
+                    <a href="https://jimmytzuc.com/blog.html"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Blog</a>
+                    <a href="https://drive.google.com/file/d/1owhF_7FnTmAeAHTiXs4ruocNSCE51Hjl/view" target="_blank"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">My CV</a>
+                </div>
+            </div>
+        </nav>
+    <!-- Page Content-->
+</header>
+<main class="text-gray-100 bg-gray-700 md:px-32">
+    
+        <!-- About-->
+    <section class="flex flex-col w-full pt-8">
+        <h1 class="mt-20 text-center py-10 text-3xl font-bold">Metiendo Python a nuestro contenedor</h1>
+        <div class="flex justify-center">
+            <img class="h-96 w-full rounded-xl object-cover lg:w-4/5" src="assets/img/developer.jpg" />
+        </div>
+        <div class="md:px-50 lg:px-56 py-5">
+            <p class="py-3 text-justify">Para entender el concepto de meter a python en nuestro contenedor debemos tener en cuenta que hablamos de docker y sus containers</p>
+            <p class="py-3 text-justify">Si no tienes bien claro estos conceptos te invito a que leas las siguiente entrada: </p>
+            <ul>
+                <li class="py-1 text-yellow-400 list-disc ml-4"><a href="docker-como-aliado.html">Docker como aliado</a></li>
+            </ul>
+            <p class="py-3 text-justify">
+                Docker es una plataforma de software que te permite crear, probar e implementar aplicaciones en contenedores. Un contenedor es una unidad de software que contiene todo lo necesario para que una aplicación se ejecute de manera independiente.
+            </p>
+            <p class="py-3 text-justify">
+                Docker es una forma fácil de encapsular aplicaciones y sus dependencias en un paquete portátil y autocontenido. Esto hace que sea fácil mover aplicaciones de un entorno a otro, lo que puede ser útil para el desarrollo, pruebas y producción.
+            </p>
+            <p class="py-3 text-justify">
+                Para Python, Docker proporciona una forma de ejecutar aplicaciones en un entorno aislado, con todas sus dependencias instaladas y configuradas de forma coherente.
+            </p>
+            <p class="py-3 text-justify">
+                Antes de entrar de lleno en Docker se debe mencionar que existen otras maneras de encapsular nustras versiones en los que son conocidos como entornos virtuales, por mencionar algunos como <a class="text-yellow-400 italic" href="https://pipenv-es.readthedocs.io/es/latest/">pipenv</a>, <a class="text-yellow-400 italic" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html">conda</a>, <a class="text-yellow-400 italic" href="https://docs.python.org/es/3/library/venv.html">venv</a>.  
+            </p>
+            <p class="py-3 text-justify">
+                Ahora si, empecemos
+            </p>
+            <p class="py-3 text-justify">
+                Paso 1: Crear un archivo Dockerfile  <br>
+                El primer paso es crear un archivo Dockerfile. Este archivo especifica cómo construir la imagen de Docker que contiene Python y las dependencias necesarias para ejecutar una aplicación Django.
+            </p>
+            <p class="py-3 text-justify">
+                En el directorio de tu proyecto, crea un archivo llamado Dockerfile y agrega el siguiente contenido:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Dockerfile</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                    FROM python:3.8 
+                    <br>
+                    <br>
+                    ENV PYTHONUNBUFFERED 1 
+                    <br>
+                    <br>
+                    RUN mkdir /code <br>
+                    WORKDIR /code <br>
+                    COPY requirements.txt /code/ <br>
+                    RUN pip install -r requirements.txt <br>
+                    COPY . /code/ <br>
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Este archivo Dockerfile usa la imagen oficial de Python 3.8 como base y define el directorio de trabajo como /code. Luego, copia el archivo requirements.txt y lo utiliza para instalar todas las dependencias necesarias. Finalmente, copia todo el contenido del proyecto a la imagen de Docker.
+            </p>
+            <p class="py-3 text-justify">
+                Paso 2: Crear un archivo requirements.txt <br>
+                El archivo requirements.txt contiene todas las dependencias de Python necesarias para ejecutar la aplicación Django. Debes crear un archivo requirements.txt en el directorio principal de tu proyecto y agregar las dependencias necesarias. Por ejemplo, si tu aplicación Django requiere Django, agrega la siguiente línea al archivo requirements.txt:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">requirements.txt</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   Django==3.1.4 
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                También puedes agregar cualquier otra dependencia que necesites para tu proyecto.
+            </p>
+            <p class="py-3 text-justify">
+                Paso 3: Crear el contenedor de Docker <br>
+                Una vez que tienes el archivo Dockerfile y requirements.txt, puedes crear la imagen de Docker y ejecutar el contenedor.
+            </p>
+            <p class="py-3 text-justify">
+                Primero, construye la imagen de Docker utilizando el siguiente comando:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Docker Script</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   docker build -t my-django-app .
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Este comando construye una imagen de Docker con el nombre my-django-app. El punto al final del comando indica que se debe utilizar el directorio actual como el contexto de compilación.
+            </p>
+            <p class="py-3 text-justify">
+                Luego, puedes ejecutar el contenedor de Docker con el siguiente comando:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Docker Script</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   docker run -it --rm -p 8000:8000 my-django-app
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Este comando ejecuta el contenedor de Docker y lo mapea al puerto 8000 en tu máquina local. El parámetro --rm indica que se debe eliminar el contenedor después de que se detenga.
+            </p>
+            <p class="py-3 text-justify">
+                Una vez que el contenedor esté en ejecución, puedes abrir tu navegador y visitar la dirección http://localhost:8000 para ver tu aplicación Django en acción.
+            </p>
+            <p class="py-3 text-justify">
+                Paso 4: Configurar la aplicación Django <br>
+                Ahora que has creado el contenedor de Docker, debes configurar la aplicación Django para que se ejecute correctamente en el entorno de Docker.
+            </p>
+            <p class="py-3 text-justify">
+                Primero, asegúrate de que el archivo settings.py tenga la siguiente configuración:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">settings.py</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                    ALLOWED_HOSTS = ['*']
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Esta configuración permite que cualquier host se conecte a la aplicación.
+            </p>
+            <p class="py-3 text-justify">
+                Luego, agrega la siguiente línea al archivo Dockerfile antes de la copia del contenido del proyecto:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Dockerfile</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                    RUN python manage.py collectstatic --noinput
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Esta línea ejecuta el comando collectstatic de Django en la imagen de Docker. Este comando recolecta todos los archivos estáticos de tu aplicación y los guarda en la carpeta STATIC_ROOT.
+            </p>
+            <p class="py-3 text-justify">
+                Finalmente, modifica el comando docker run para incluir el parámetro -v y mapear el directorio de archivos estáticos de Django en la imagen de Docker al directorio local. De esta manera, los archivos estáticos se pueden servir correctamente:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Dockerfile</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                    docker run -it --rm -p 8000:8000 -v "$(pwd)"/static:/code/static my-django-app
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Paso 5: Trabajar con el contenedor de Docker <br>
+                Una vez que el contenedor de Docker esté en ejecución, puedes trabajar con él de la misma manera que trabajarías con una aplicación Django local.
+            </p>
+            <p class="py-3 text-justify">
+                Para acceder al shell de Django en el contenedor, utiliza el siguiente comando:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Docker Script</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   docker exec -it <container-id> python manage.py shell
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Donde <container-id> es el ID del contenedor de Docker. Puedes obtener el ID del contenedor ejecutando el siguiente comando:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0">Docker Script</p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   docker ps
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Este comando lista todos los contenedores de Docker en ejecución.
+            </p>
+            <p class="py-3 text-justify">
+                Conclusión <br>
+                En resumen, Docker es una herramienta poderosa para el desarrollo de aplicaciones Python. Te permite encapsular tus aplicaciones y dependencias en un contenedor portátil y autocontenido, lo que hace que sea fácil mover tus aplicaciones entre entornos.
+            </p>
+            <p class="py-3 text-justify">
+                En este post, hemos cubierto cómo contener Python en un contenedor de Docker y cómo trabajar con Django en este entorno. Ahora estás listo para desarrollar tu aplicación Django en un entorno de Docker aislado y portátil. ¡Buena suerte!
+            </p>
+        </div>
+    </section>
+</main>
+<footer class="flex flex-col items-center p-3 text-gray-100 bg-indigo-900">
+    <div class="py-3">
+      <a target="_blank" class="p-1 mx-5" href="https://www.linkedin.com/in/jimmytzuc/"><i class="fab fa-linkedin-in"></i></a>
+      <a target="_blank" class="p-1 mx-5" href="https://github.com/JimmyTzuc"><i class="fab fa-github"></i></a>
+      <a target="_blank" class="p-1 mx-5" href="https://www.facebook.com/jimmytzuc/"><i class="fab fa-facebook-f"></i></a>
+      <a target="_blank" class="p-1 mx-5" href="https://twitter.com/JimmyTzuc"><i class="fab fa-twitter"></i></a>
+    </div>
+    <section class="">
+        <p class="font-bold text-red-600"><span class="text-yellow-500">&copy;</span>	Made by <span class="text-yellow-500">Jimmy Tzuc</span> All rights reserved 2022</p>
+    </section>
+</footer>
+</body>
+    <!-- Core theme JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/scripts.js"></script>
+</html>

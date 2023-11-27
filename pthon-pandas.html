@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Jimmy Tzuc</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+    <link href="css/tailwind.min.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+</head>
+
+<body class="dark:text-white dark:bg-gray-900 ">
+<header>
+    <!-- Navigation-->
+    <nav class="fixed top-0 left-0 right-0 z-10 px-8 bg-indigo-900" x-data="{ open: false }">
+            <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="relative flex items-center justify-between h-16">
+                    <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
+                        <!-- Mobile menu button-->
+                        <button x-on:click="open = true"
+                            class="inline-flex items-center justify-center p-2 text-yellow-400 rounded-md hover:text-yellow-400 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500"
+                            aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <!-- Icon when menu is closed. -->
+
+                            <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <!-- Icon when menu is open. -->
+                            <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between flex-1 sm:items-stretch sm:justify-between">
+                        <!-- logotipo -->
+                        <a href="/" class="flex items-center flex-shrink-0">
+                            <img class="block w-auto h-10 lg:hidden" src="assets/img/logo.png" alt="Workflow">
+                            <img class="hidden w-auto h-10 lg:block" src="assets/img/logo.png">
+                        </a>
+                        <div class="hidden md:block md:ml-6">
+                            <div class="flex w-full space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <!-- <a href="#" class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
+                                <a href="/"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Home</a>
+                                <a href="#experience"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Experience</a>
+                                <!--<a href="#education" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Education</a>-->
+                                <a href="#skills"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Skills</a>
+                                <a href="#portfolio"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Portfolio</a>
+                                <a href="https://jimmytzuc.com/blog.html"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Blog</a>
+                                <!-- <a href="https://drive.google.com/file/d/1owhF_7FnTmAeAHTiXs4ruocNSCE51Hjl/view" target="_blank" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"  aria-current="page">My CV</a>-->
+                                <a href="https://drive.google.com/file/d/1vsaAT4wJxUl3FIAdt_4J2qFV5lfWaIJu/view
+                                    target="_blank"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"
+                                    aria-current="page">My CV</a>
+                                <!-- <a href="resources/descargas.php" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"  aria-current="page">My CV</a>-->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="md:hidden" x-show="open" x-on:click.away="open = false">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <!-- <a href="#" class="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
+                    <a href="/" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md"
+                        aria-current="page">Inicio</a>
+                    <a href="#experience"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Experince</a>
+                    <!--<a href="#education" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Education</a>-->
+                    <a href="#skills"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Skills</a>
+                    <a href="#portfolio"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Portfolio</a>
+                    <a href="https://jimmytzuc.com/blog.html"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Blog</a>
+                    <a href="https://drive.google.com/file/d/1owhF_7FnTmAeAHTiXs4ruocNSCE51Hjl/view" target="_blank"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">My CV</a>
+                </div>
+            </div>
+        </nav>
+    <!-- Page Content-->
+</header>
+<main class="text-gray-100 bg-gray-700 md:px-32">
+    
+        <!-- About-->
+    <section class="flex flex-col w-full pt-8">
+        <h1 class="mt-20 text-center py-10 text-3xl font-bold">Pandas para todos y en todos lados: Cómo usar Pandas y Docker en Python</h1>
+        <div class="flex justify-center">
+            <img class="h-96 w-full rounded-xl object-cover lg:w-4/5" src="https://images.unsplash.com/photo-1633185072510-7fa0f164d24b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+        </div>
+        <div class="md:px-50 lg:px-56 py-5">
+            <p class="py-3 text-justify">
+                Pandas es una de las librerías más populares en Python para la manipulación y análisis de datos. Docker, por otro lado, es una herramienta que permite la creación y despliegue de aplicaciones en contenedores. En este artículo, te mostraré cómo puedes usar Pandas y Docker juntos para crear una aplicación de análisis de datos escalable y portátil.
+            </p>
+            <p class="py-3 text-justify">
+                Instalación de Pandas <br>
+                Antes de empezar, necesitarás tener Pandas instalado en tu máquina. Puedes instalarlo fácilmente usando pip. Si estás usando un ambiente virtual, primero actívalo y luego ejecuta el siguiente comando:
+            </p>
+            <div class="p-0 overflow-hidden rounded-lg my-1">
+                <p class="bg-gray-400 pl-5 py-2 italic text-gray-700 m-0"></p>
+                <p class="bg-black pl-5 py-2 italic text-gray-400 m-0">
+                   pip install pandas
+                </p>
+            </div>
+            <p class="py-3 text-justify">
+                Si no tienes un ambiente virtual y estás instalando Pandas globalmente, asegúrate de ejecutar el comando con permisos de administrador (sudo).
+            </p>
+            <p class="py-3 text-justify">
+                
+            </p>
+            <p class="py-3 text-justify">
+                
+            </p>
+        </div>
+    </section>
+</main>
+<footer class="flex flex-col items-center p-3 text-gray-100 bg-indigo-900">
+    <div class="py-3">
+      <a target="_blank" class="p-1 mx-5" href="https://www.linkedin.com/in/jimmytzuc/"><i class="fab fa-linkedin-in"></i></a>
+      <a target="_blank" class="p-1 mx-5" href="https://github.com/JimmyTzuc"><i class="fab fa-github"></i></a>
+      <a target="_blank" class="p-1 mx-5" href="https://www.facebook.com/jimmytzuc/"><i class="fab fa-facebook-f"></i></a>
+      <a target="_blank" class="p-1 mx-5" href="https://twitter.com/JimmyTzuc"><i class="fab fa-twitter"></i></a>
+    </div>
+    <section class="">
+        <p class="font-bold text-red-600"><span class="text-yellow-500">&copy;</span>	Made by <span class="text-yellow-500">Jimmy Tzuc</span> All rights reserved 2022</p>
+    </section>
+</footer>
+</body>
+    <!-- Core theme JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/scripts.js"></script>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Jimmy Tzuc</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+    <link href="css/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="text-gray-100 bg-gray-900">
+    <header>
+        <!-- Navigation-->
+        <nav class="fixed top-0 left-0 right-0 z-10 px-8 bg-indigo-900" x-data="{ open: false }">
+            <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="relative flex items-center justify-between h-16">
+                    <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
+                        <!-- Mobile menu button-->
+                        <button x-on:click="open = true"
+                            class="inline-flex items-center justify-center p-2 text-yellow-400 rounded-md hover:text-yellow-400 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500"
+                            aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <!-- Icon when menu is closed. -->
+
+                            <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <!-- Icon when menu is open. -->
+                            <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between flex-1 sm:items-stretch sm:justify-between">
+                        <!-- logotipo -->
+                        <a href="/" class="flex items-center flex-shrink-0">
+                            <img class="block w-auto h-10 lg:hidden" src="assets/img/logo.png" alt="Workflow">
+                            <img class="hidden w-auto h-10 lg:block" src="assets/img/logo.png">
+                        </a>
+                        <div class="hidden md:block md:ml-6">
+                            <div class="flex w-full space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <!-- <a href="#" class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
+                                <a href="/"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Home</a>
+                                <a href="#experience"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Experience</a>
+                                <!--<a href="#education" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Education</a>-->
+                                <a href="#skills"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Skills</a>
+                                <a href="#portfolio"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
+                                    aria-current="page">Portfolio</a>
+                                <!-- <a href="https://drive.google.com/file/d/1owhF_7FnTmAeAHTiXs4ruocNSCE51Hjl/view" target="_blank" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"  aria-current="page">My CV</a>-->
+                                <a href="https://drive.google.com/file/d/1vsaAT4wJxUl3FIAdt_4J2qFV5lfWaIJu/view
+                                    target="_blank"
+                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"
+                                    aria-current="page">My CV</a>
+                                <!-- <a href="resources/descargas.php" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"  aria-current="page">My CV</a>-->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="md:hidden" x-show="open" x-on:click.away="open = false">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <!-- <a href="#" class="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
+                    <a href="/" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md"
+                        aria-current="page">Inicio</a>
+                    <a href="#experience"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Experince</a>
+                    <!--<a href="#education" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Education</a>-->
+                    <a href="#skills"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Skills</a>
+                    <a href="#portfolio"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Portfolio</a>
+                    <a href="https://jimmytzuc.com/blog.html"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">Blog</a>
+                    <a href="https://drive.google.com/file/d/1owhF_7FnTmAeAHTiXs4ruocNSCE51Hjl/view" target="_blank"
+                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
+                        aria-current="page">My CV</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Content-->
+    </header>
+    <main>
+        <section class="px-6 pt-24 md:px-24">
+            <div class="pb-6 text-center md:pb-20">
+                <h1 class="text-xl text-yellow-400 md:pt-10 md:text-5xl md:font-bold border-white">Apuntes de Jimmy Tzuc</h1>
+                <p class="italic">Bienvenidos!</p>
+            </div>
+            <div class="md:px-70">
+                <ul>
+                    <li class="py-3 md:py-6">
+                        <a href="docker-como-aliado.html" class="pb-5 text-lg italic font-semibold text-red-500 md:text-2xl visited:text-purple-600 md:hover:underline">Docker como aliado</a>
+                        <p class="md:text-lg">Crear ambientes que pueden ser levantadas desde cualquier S.O. es posible</p>
+                    </li>
+                    <li class="py-3 md:py-6">
+                        <a href="docker-con-python.html" class="pb-5 text-lg italic font-semibold text-red-500 md:text-2xl visited:text-purple-600 md:hover:underline">Conteniendo a Python</a>
+                        <p class="md:text-lg">El poder de Docker en la palma de mi mano</p>
+                    </li>
+                    <li class="py-3 md:py-6">
+                        <a href="docker-con-python.html" class="pb-5 text-lg italic font-semibold text-red-500 md:text-2xl visited:text-purple-600 md:hover:underline">Python - Pandas - Docker</a>
+                        <p class="md:text-lg">Pandas para todos y en todos lados</p>
+                    </li>
+                    <li class="py-3 md:py-6">
+                        <a href="#" class="pb-5 text-lg italic font-semibold text-red-500 md:text-2xl visited:text-purple-600 md:hover:underline">¿Conventional commits?</a>
+                        <p class="md:text-lg">Escribir commits cualquiera puede hacerlo, pero sabias que existe una guia de como deberia de hacerce?</p>
+                    </li>
+                    <li class="py-3 md:py-6">
+                        <a href="#" class="pb-5 text-lg italic font-semibold text-red-500 md:text-2xl visited:text-purple-600 md:hover:underline">Git y el trabajo en equipo</a>
+                        <p class="md:text-lg">¿Que hago si mi rama quedo atras del resto del equipo?</p>
+                    </li>
+                    <li class="py-3 md:py-6">
+                        <a href="#" class="pb-5 text-lg italic font-semibold text-red-500 md:text-2xl visited:text-purple-600 md:hover:underline">ETL con python</a>
+                        <p class="md:text-lg">Maneras de complicarnos la vida para simplificar la de los demas.</p>
+                    </li>
+                    <li class="py-3 md:py-6">
+                        <a href="#" class="pb-5 text-lg italic font-semibold text-red-500 md:text-2xl visited:text-purple-600 md:hover:underline">Commit that line</a>
+                        <p class="md:text-lg">Hablemos un poco de pep8, flake8, black, precommit y esas vainas.</p>
+                    </li>
+                    <li class="py-3 md:py-6">
+                        <a href="#" class="pb-5 text-lg italic font-semibold text-red-500 md:text-2xl visited:text-purple-600 md:hover:underline">VIM como aliado al programar</a>
+                        <p class="md:text-lg">Tips y configuraciones para tu editor VIM</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

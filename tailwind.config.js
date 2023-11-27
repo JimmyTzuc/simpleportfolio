@@ -32,6 +32,7 @@ darkMode: 'media',
     extend: {
       borderColor: ['focus-visible'],
       opacity: ['disabled'],
+      textColor: ['visited'],
     }
   }
 }
