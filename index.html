@@ -15,15 +15,22 @@
         type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+    <!-- Tailwind -->
     <link href="css/tailwind.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Alpine Js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        .nav-link-active {
+            background-color: #ed8936; /* Color de fondo resaltado */
+            color: #fff; /* Color de texto resaltado */
+        }
+    </style>
 </head>
 
 <body class="">
     <header>
         <!-- Navigation-->
-        <nav class="fixed top-0 left-0 right-0 z-10 px-8 bg-indigo-900" x-data="{ open: false }">
+        <nav class="fixed top-0 left-0 right-0 z-10 px-8 bg-indigo-900" x-data="{ open: false, activeLink: 'home' }">
             <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="relative flex items-center justify-between h-16">
                     <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
@@ -33,7 +40,6 @@
                             aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
                             <!-- Icon when menu is closed. -->
-
                             <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -55,67 +61,39 @@
                         </a>
                         <div class="hidden md:block md:ml-6">
                             <div class="flex w-full space-x-4">
-                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <!-- <a href="#" class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
-                                <a href="/"
-                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
-                                    aria-current="page">Home</a>
-                                <a href="#experience"
-                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
-                                    aria-current="page">Experience</a>
-                                <!--<a href="#education" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"  aria-current="page">Education</a>-->
-                                <a href="#skills"
-                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
-                                    aria-current="page">Skills</a>
-                                <a href="#portfolio"
-                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
-                                    aria-current="page">Portfolio</a>
-                                <!--<a href="https://jimmytzuc.com/blog.html"
-                                    class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger"
-                                    aria-current="page">Blog</a>-->
-                                <!-- <a href="https://drive.google.com/file/d/1owhF_7FnTmAeAHTiXs4ruocNSCE51Hjl/view" target="_blank" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"  aria-current="page">My CV</a>-->
+                                <template x-for="link in ['home', 'experience', 'skills', 'portfolio']" :key="link">
+                                    <a href="#" x-on:click.prevent="activeLink = link; $nextTick(() => open = false); document.getElementById(link).scrollIntoView({ behavior: 'smooth' });"
+                                        x-bind:class="{ 'px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options nav-link js-scroll-trigger': true, 'bg-red-700 text-yellow-300': activeLink === link }"
+                                        x-text="link.charAt(0).toUpperCase() + link.slice(1)"
+                                        aria-current="page"></a>
+                                </template>
                                 <a href="https://drive.google.com/file/d/1AOKOWEDqr5-9yo-4zNO-YVA09TiMpGeg/view"
                                     target="_blank"
                                     class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"
-                                    aria-current="page">Download my CV Here</a>
-                                <!-- <a href="resources/descargas.php" class="flex justify-center px-3 py-2 text-sm font-medium text-yellow-400 rounded-md hover:bg-red-700 hover:text-yellow-300 nav-options"  aria-current="page">My CV</a>-->
+                                    x-bind:class="{ 'bg-red-700 text-yellow-300': activeLink === 'cv' }"
+                                    aria-current="page">My CV</a>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
 
-
             <div class="md:hidden" x-show="open" x-on:click.away="open = false">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <!-- <a href="#" class="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md">Dashboard</a> -->
-                    <a href="/" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md"
-                        aria-current="page">Inicio</a>
-                    <a href="#experience"
-                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
-                        aria-current="page">Experince</a>
-                    <!--<a href="#education" class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger" aria-current="page">Education</a>-->
-                    <a href="#skills"
-                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
-                        aria-current="page">Skills</a>
-                    <a href="#portfolio"
-                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
-                        aria-current="page">Portfolio</a>
-                    <a href="https://jimmytzuc.com/blog.html"
-                        class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
-                        aria-current="page">Blog</a>
+                    <template x-for="link in ['home', 'experience', 'skills', 'portfolio']" :key="link">
+                        <a href="#" x-on:click.prevent="activeLink = link; $nextTick(() => open = false); document.getElementById(link).scrollIntoView({ behavior: 'smooth' });"
+                            x-bind:class="{ 'block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger': true, 'bg-red-700 text-yellow-300': activeLink === link }"
+                            x-text="link.charAt(0).toUpperCase() + link.slice(1)" aria-current="page"></a>
+                    </template>
                     <a href="https://drive.google.com/file/d/1AOKOWEDqr5-9yo-4zNO-YVA09TiMpGeg/view" target="_blank"
                         class="block px-3 py-2 text-base font-medium text-yellow-400 bg-gray-900 rounded-md nav-options nav-link js-scroll-trigger"
-                        aria-current="page">My CV</a>
+                        x-bind:class="{ 'bg-red-700 text-yellow-300': activeLink === 'cv' }" aria-current="page">My CV</a>
                 </div>
             </div>
         </nav>
         <!-- Page Content-->
     </header>
-    <main class="text-gray-100 bg-gray-900">
+    <main id="home" class="text-gray-100 bg-gray-900">
         <!-- About-->
         <section class="flex items-center justify-center w-full h-screen" id="about">
             <div class="container px-10 text-center">
